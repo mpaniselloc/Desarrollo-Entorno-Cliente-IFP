@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padel</title>
+</head>
+
+<body>
+
+  <p id="informacionJugador"></p>
+
+  <script>
+
+    //Recuperamos el nombre completo del jugador
+    let nombreJugadorCompleto = sessionStorage.getItem("nombreJugadorCompleto");
+
+
+
+    //Pedimos la edad del jugador, nos aseguramos que sea un Int para evitar problemas
+    let edadJugador = parseInt(prompt("Introduzca su edad porfavor: "));
+
+    //Pedimos el sexo del jugador, y a su misma vez lo convertiremos en mayusculas
+    let sexoJugador = prompt("Introduzca su sexo porfavor (M/F): ").toUpperCase();
+
+    //Pedimos el ranking que ocupa el jugador, nos aseguramos que sea un Int para evitar problemas
+    let rankingJugador = parseInt(prompt("Introduzca su posicion en el Ranking (Padel): "));
+
+    // Para no repetir codigo declaramos estas variables para guardar la informacion y luego concatenar
+    let liguilla = "";
+    let genero = "";
+    let categoria = "";
+
+    // Decidimos el género según el sexo introducido
+    if (sexoJugador === "M") {
+      genero = "Masculino";
+    } else {
+      genero = "Femenino";
+    }
+
+    // Decidimos la liguilla según la edad
+    if (edadJugador > 30) {
+      liguilla = "Veteranos";
+    } else {
+      liguilla = "Senior";
+
+      // Solo los senior tienen categoría
+      if (rankingJugador >= 1 && rankingJugador <= 50) {
+        categoria = "1ª categoria";
+      } else if (rankingJugador >= 51 && rankingJugador <= 100) {
+        categoria = "2ª categoria";
+      } else {
+        categoria = "3ª categoria";
+      }
+    }
+
+
+    // Mensaje de concatenacion con la informacion
+    let mensaje = nombreJugadorCompleto + " jugara en la liguilla <b>" + liguilla + " " + genero + "</b>";
+
+    // Controlamos que el jugador tenga categoria, ya que solo los senior la tienen, si la categoria es distinto de vacio, concatenamos el mensaje que ya tenemos con la variable categoria
+    if (categoria !== "") {
+      mensaje = mensaje + " en <b>" + categoria + "</b>.";
+    }
+
+    //Mostramos la informacion en el parrafo identificado con el id informacionJugador
+    document.getElementById("informacionJugador").innerHTML = mensaje;
+
+  </script>
+
+</body>
+
+</html>
