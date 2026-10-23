@@ -1,10 +1,16 @@
 # Desarrollo Web en Entorno Cliente (DAW - iFP)
 
-Repositorio central de prácticas, actividades y proyectos de la asignatura **Desarrollo Web en Entorno Cliente**, correspondiente al ciclo formativo de grado superior en **Desarrollo de Aplicaciones Web (DAW)** impartido en **iFP (Innovación en Formación Profesional)**.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Patrón MVC](https://img.shields.io/badge/Architecture-MVC-6C5CE7?style=for-the-badge)
+![DAW](https://img.shields.io/badge/DAW-IFP-green?style=for-the-badge)
+
+Repositorio central de prácticas, actividades y proyectos de la asignatura **Desarrollo Web en Entorno Cliente (0612)**, correspondiente al Ciclo Formativo de Grado Superior en **Desarrollo de Aplicaciones Web (DAW)** impartido en **iFP (Innovación en Formación Profesional)**.
 
 - **Autor:** Marc Panisello Chiva
-- **Módulo:** Desarrollo Web en Entorno Cliente
-- **Rama:** `main`
+- **Módulo:** Desarrollo Web en Entorno Cliente (0612)
+- **Rama principal:** `main`
 
 ---
 
@@ -12,7 +18,7 @@ Repositorio central de prácticas, actividades y proyectos de la asignatura **De
 
 ```text
 Desarrollo-Entorno-Cliente-IFP/
-├── README.md                              # Documentación general del repositorio (rama main)
+├── README.md                              # Documentación general del repositorio
 │
 ├── UF1/                                   # Unidad Formativa 1: Sintaxis y objetos en cliente
 │   ├── README.md                          # Documentación de UF1 / NF1
@@ -30,7 +36,18 @@ Desarrollo-Entorno-Cliente-IFP/
 │           ├── script.js                  # Lógica de captura y bienvenida
 │           └── padel.html                 # Clasificación por categorías en DOM
 │
-└── UF2/                                   # Unidad Formativa 2 (Próximas entregas)
+└── UF2/                                   # Unidad Formativa 2: Objetos predefinidos y estructuras del usuario
+    ├── README.md                          # Documentación técnica completa de UF2
+    ├── viajes.html                        # Estructura semántica de la aplicación PaniViajes
+    ├── viajes.css                         # Hoja de estilos desacoplada
+    ├── viajes.js                          # Lógica orientada a objetos (Patrón MVC)
+    └── imagen/                            # Recursos gráficos de los destinos turísticos
+        ├── china.jpg
+        ├── coreasur.jpg
+        ├── india.jpg
+        ├── japon.jpg
+        ├── tailandia.jpg
+        └── vietnam.jpg
 ```
 
 ---
@@ -57,13 +74,27 @@ Enfocada en el aprendizaje de la sintaxis moderna de JavaScript (ES6+), tipos de
 
 ---
 
-## 🛠️ Tecnologías Empleadas
+### 🔹 [UF2: Objetos del Lenguaje, Clases y Patrón MVC](./UF2/README.md)
+Enfocada en la arquitectura de software en cliente mediante clases, separación de responsabilidades y estructuras de datos dinámicas (RA4).
 
-- **HTML5:** Marcado semántico para la estructura de las vistas.
-- **JavaScript (ES6+):** Programación y lógica en el lado del cliente.
-- **DOM API:** Acceso y manipulación dinámica de elementos del documento.
-- **Web Storage API:** Almacenamiento en sesión del usuario (`sessionStorage`).
-- **Git & GitHub:** Control de versiones del código fuente.
+#### Contenido del Núcleo Formativo 2 (NF2):
+- **[PaniViajes](./UF2/README.md) — Plataforma de Gestión Turística y Sorteos**:
+  - **Patrón de Diseño MVC**: Desacoplamiento total entre datos (`ViajesModelo`), interfaz (`ViajesVista`) y eventos (`ViajesControlador`).
+  - **Estructuras de Datos**: Almacenamiento y sincronización de colecciones en arrays paralelos (destinos, imágenes y tarifas).
+  - **Carrusel Circular**: Algoritmo de rotación continua infinita para 6 destinos internacionales.
+  - **Persistencia en Cliente (`localStorage`)**: Acumulación y persistencia del contador de visitas del usuario entre sesiones.
+  - **Motor de Sorteo Probabilístico**: Generación pseudoaleatoria con el objeto predefinido `Math`, condicionales compuestos y cálculo dinámico de descuentos comerciales (15%).
+
+---
+
+## 🛠️ Tecnologías y Conceptos Empleados
+
+- **HTML5:** Marcado semántico y estructuración de interfaces de usuario.
+- **CSS3:** Maquetación responsiva, diseño en tarjetas y control de visibilidad (`.oculto`).
+- **JavaScript (ES6+):** Clases (`class`), constructores, métodos y manipulación del DOM.
+- **Patrones de Arquitectura:** MVC (Modelo-Vista-Controlador) para aplicaciones web en cliente.
+- **Web Storage API:** Persistencia de datos en el cliente (`localStorage` y `sessionStorage`).
+- **Git & GitHub:** Control de versiones, ramas y documentación técnica.
 
 ---
 
@@ -79,11 +110,14 @@ git clone https://github.com/mpaniselloc/Desarrollo-Entorno-Cliente-IFP.git
 cd Desarrollo-Entorno-Cliente-IFP
 
 # 3. Abrir cualquiera de las actividades en el navegador
-# Ejemplo ACT2:
+# Ejemplo UF1 - ACT2:
 # Abrir UF1/NF1_DAW_Marc_Panisello_Chiva/ACT2/index.html
 
-# Ejemplo ACT3:
+# Ejemplo UF1 - ACT3:
 # Abrir UF1/NF1_DAW_Marc_Panisello_Chiva/ACT3/usuario.html
+
+# Ejemplo UF2 - PaniViajes:
+# Abrir UF2/viajes.html
 ```
 
 ---
