@@ -1,0 +1,75 @@
+/* Centrar todo el texto, fondo suave y fuente */
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 20px;
+  background-color: #f4f6f9;
+}
+
+/* Color para el título principal */
+h1 {
+  color: #2c3e50;
+}
+
+/* Tarjetas con fondo blanco y esquinas redondeadas */
+.tarjeta {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #dce4ec;
+  border-radius: 8px;
+}
+
+/* Botones con color azul */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Alinear las flechas al lado de la foto */
+.carrusel-contenedor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Controlar el tamaño de la imagen */
+#imagenDestino {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Destacar el precio en verde */
+.precio {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+/* Destacar el mensaje del sorteo */
+.mensaje-sorteo {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e8f4f8;
+  color: #2c3e50;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* Lo indispensable para ocultar y mostrar con JS */
+.oculto {
+  display: none;
+}
