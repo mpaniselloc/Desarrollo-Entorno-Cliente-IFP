@@ -12,7 +12,7 @@ Proyecto práctico desarrollado para el módulo profesional **Desarrollo Web en 
 
 ## 📌 Descripción del Proyecto
 
-**PaniViajes** es una aplicación web interactiva de gestión y visualización de viajes que implementa una arquitectura orientada a objetos bajo el **patrón de diseño MVC (Modelo - Vista - Controlador)**. 
+**PaniViajes** es una aplicación web interactiva de gestión y visualización de viajes que implementa una arquitectura orientada a objetos bajo el **patrón de diseño MVC (Modelo - Vista - Controlador)**.
 
 La aplicación permite la identificación del usuario, despliega un carrusel dinámico de navegación circular con 6 destinos internacionales y calcula automáticamente la participación en un sorteo de descuentos acumulativo en función del historial de visitas persistido en el navegador.
 
@@ -44,18 +44,21 @@ graph LR
 ```
 
 ### 1. Modelo (`ViajesModelo`)
+
 - Encapsula los arrays de datos: destinos, rutas de imágenes y tarifas.
 - Controla el puntero de navegación circular (`indiceActual`).
 - Gestiona el almacenamiento local (`localStorage`) para registrar visitas.
 - Ejecuta la lógica matemática del sorteo y cálculo de descuentos.
 
 ### 2. Vista (`ViajesVista`)
+
 - Mapea las referencias a los elementos del DOM (`document.getElementById`).
 - Actualiza el contenido visual del carrusel (imágenes, textos, precios y contador).
 - Gestiona la visibilidad de las capas mediante manipulación de clases CSS (`.oculto`).
 - Renderiza los mensajes del resultado del sorteo.
 
 ### 3. Controlador (`ViajesControlador`)
+
 - Actúa como intermediario desacoplado entre el Modelo y la Vista.
 - Suscribe y gestiona los escuchadores de eventos (`addEventListener`) para las acciones del usuario (login, flecha anterior, flecha siguiente).
 
@@ -93,7 +96,7 @@ No se requieren dependencias externas ni servidores complejos:
    cd Desarrollo-Entorno-Cliente-IFP/UF2
    ```
 3. **Ejecutar la aplicación:**
-   - Abre directamente el archivo `viajes.html` con cualquier navegador moderno (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari) o mediante la extensión *Live Server* de Visual Studio Code.
+   - Abre directamente el archivo `viajes.html` con cualquier navegador moderno (Google Chrome, Mozilla Firefox, Microsoft Edge, Safari) o mediante la extensión _Live Server_ de Visual Studio Code.
 
 ---
 
@@ -111,4 +114,4 @@ No se requieren dependencias externas ni servidores complejos:
 
 - **Alumno**: Marc Panisello
 - **Curso**: Ciclo Formativo de Grado Superior en Desarrollo de Aplicaciones Web (DAW)
-- **Módulo**: Desarrollo Web en Entorno Cliente (0612)
+- **Módulo**: Desarrollo Web en Entorno Cliente
