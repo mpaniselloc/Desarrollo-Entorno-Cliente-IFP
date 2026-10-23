@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="viajes.css">
+  <script src="viajes.js"></script>
+  <title>PaniViajes</title>
+</head>
+
+<body>
+
+  <!-- Cabecera y mensaje de bienvenida -->
+  <header>
+    <h1>PaniViajes</h1>
+    <div id="mensajeBienvenida" class="oculto"></div>
+  </header>
+
+  <main>
+    <!-- 1. Formulario inicial para solicitar el nombre -->
+    <section id="seccionLogin" class="tarjeta">
+      <h2>Introduce tu nombre para empezar</h2>
+      <input type="text" id="inputNombre" placeholder="Tu nombre...">
+      <button id="btnEntrar">Comenzar viaje</button>
+    </section>
+
+    <!-- 2. Carrusel de destinos (se muestra tras ingresar el nombre) -->
+    <section id="seccionCarrusel" class="tarjeta oculto">
+      <div class="carrusel-contenedor">
+        <button id="btnAnterior" class="btn-carrusel">&#10094;</button>
+
+        <div class="destino-info">
+          <img id="imagenDestino" src="" alt="Destino turístico">
+          <h2 id="nombreDestino"></h2>
+          <p id="precioDestino" class="precio"></p>
+          <span id="contadorDestino" class="contador"></span>
+        </div>
+
+        <button id="btnSiguiente" class="btn-carrusel">&#10095;</button>
+      </div>
+    </section>
+
+    <!-- 3. Sección del sorteo y visitas -->
+    <section id="seccionSorteo" class="tarjeta oculto">
+      <p id="infoVisitas"></p>
+      <div id="resultadoSorteo" class="mensaje-sorteo"></div>
+    </section>
+  </main>
+
+</body>
+
+</html>
