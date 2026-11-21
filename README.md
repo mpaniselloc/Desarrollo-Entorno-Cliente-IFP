@@ -36,18 +36,26 @@ Desarrollo-Entorno-Cliente-IFP/
 │           ├── script.js                  # Lógica de captura y bienvenida
 │           └── padel.html                 # Clasificación por categorías en DOM
 │
-└── UF2/                                   # Unidad Formativa 2: Objetos predefinidos y estructuras del usuario
-    ├── README.md                          # Documentación técnica completa de UF2
-    ├── viajes.html                        # Estructura semántica de la aplicación PaniViajes
-    ├── viajes.css                         # Hoja de estilos desacoplada
-    ├── viajes.js                          # Lógica orientada a objetos (Patrón MVC)
-    └── imagen/                            # Recursos gráficos de los destinos turísticos
-        ├── china.jpg
-        ├── coreasur.jpg
-        ├── india.jpg
-        ├── japon.jpg
-        ├── tailandia.jpg
-        └── vietnam.jpg
+├── UF2/                                   # Unidad Formativa 2: Objetos predefinidos y estructuras del usuario
+│   ├── README.md                          # Documentación técnica completa de UF2
+│   ├── viajes.html                        # Estructura semántica de la aplicación PaniViajes
+│   ├── viajes.css                         # Hoja de estilos desacoplada
+│   ├── viajes.js                          # Lógica orientada a objetos (Patrón MVC)
+│   └── imagen/                            # Recursos gráficos de los destinos turísticos
+│       ├── china.jpg
+│       ├── coreasur.jpg
+│       ├── india.jpg
+│       ├── japon.jpg
+│       ├── tailandia.jpg
+│       └── vietnam.jpg
+│
+└── UF3/                                   # Unidad Formativa 3: Eventos, formularios y expresiones regulares
+    ├── README.md                          # Documentación de la gestión de cursos (NF3)
+    ├── academia.html                      # Formulario, botones, contador y listado de cursos
+    ├── academia.css                       # Estilos de la página
+    ├── modelo.js                          # Modelo: array de cursos y expresiones regulares
+    ├── vista.js                           # Vista: pinta listado, contadores y errores
+    └── controlador.js                     # Controlador: addEventListener y delegación de eventos
 ```
 
 ---
@@ -87,12 +95,27 @@ Enfocada en la arquitectura de software en cliente mediante clases, separación 
 
 ---
 
+### 🔹 [UF3: Eventos, Formularios y Expresiones Regulares](./UF3/README.md)
+Enfocada en la interacción con el usuario: gestión de eventos, validación de formularios y modificación dinámica del DOM.
+
+#### Contenido del Núcleo Formativo 3 (NF3):
+- **[Gestión de Cursos de una Academia](./UF3/README.md)**:
+  - **Patrón MVC en ficheros separados**: `modelo.js` (datos), `vista.js` (DOM) y `controlador.js` (eventos), cargados en ese orden.
+  - **Eventos de formulario**: `focus`, `blur`, `input` y `submit` (resaltado de campos, mayúsculas automáticas, envío con Enter).
+  - **Validación con expresiones regulares**: código con formato `DAW001/25` y nombre de 5 a 100 letras, con mensajes de error propios.
+  - **Gestión del listado**: añadir, mostrar todos, quitar todos, ocultar, eliminar y recuperar cursos ocultos por código.
+  - **Delegación de eventos**: un único `addEventListener` en la lista, usando `e.target` y atributos `data-codigo`.
+  - **Contador dinámico** de cursos visibles / cursos totales.
+
+---
+
 ## 🛠️ Tecnologías y Conceptos Empleados
 
 - **HTML5:** Marcado semántico y estructuración de interfaces de usuario.
 - **CSS3:** Maquetación responsiva, diseño en tarjetas y control de visibilidad (`.oculto`).
 - **JavaScript (ES6+):** Clases (`class`), constructores, métodos y manipulación del DOM.
 - **Patrones de Arquitectura:** MVC (Modelo-Vista-Controlador) para aplicaciones web en cliente.
+- **Eventos y formularios:** `addEventListener`, delegación de eventos y validación con expresiones regulares (`RegExp`).
 - **Web Storage API:** Persistencia de datos en el cliente (`localStorage` y `sessionStorage`).
 - **Git & GitHub:** Control de versiones, ramas y documentación técnica.
 
@@ -118,6 +141,9 @@ cd Desarrollo-Entorno-Cliente-IFP
 
 # Ejemplo UF2 - PaniViajes:
 # Abrir UF2/viajes.html
+
+# Ejemplo UF3 - Gestión de cursos:
+# Abrir UF3/academia.html
 ```
 
 ---
