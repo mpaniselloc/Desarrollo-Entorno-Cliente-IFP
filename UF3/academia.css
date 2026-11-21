@@ -1,0 +1,95 @@
+/* ===== ESTILOS GENERALES DE LA PÁGINA ===== */
+
+/* Fuente, color de fondo y centrado del contenido */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0 16px;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+/* ===== FORMULARIO ===== */
+
+/* Caja blanca con bordes redondeados y sombra suave */
+#formCurso {
+  background-color: #fff;
+  padding: 20px 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cada fila del formulario (label + input + info + error) */
+#formCurso div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+/* Etiquetas con ancho fijo para que los campos queden alineados */
+#formCurso label {
+  width: 120px;
+  font-weight: bold;
+}
+
+/* Campos de texto */
+#formCurso input {
+  flex: 1;
+  min-width: 180px;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+/* Icono de información: al pasar el ratón muestra la ayuda (atributo title) */
+.info {
+  color: #3498db;
+  font-size: 18px;
+  cursor: help;
+}
+
+/* Huecos para los mensajes de error: rojo y en su propia línea */
+#errorCodigo,
+#errorNombreCurso,
+#errorCodigo,
+#errorNombreCurso,
+#errorOculto {
+  width: 100%;
+  margin-left: 128px;
+  color: #c0392b;
+  font-size: 13px;
+}
+
+/* Botón de enviar */
+#formCurso button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+/* Botón al pasar el ratón: un azul más oscuro */
+#formCurso button:hover {
+  background-color: #2980b9;
+}
+
+/* Campo resaltado cuando tiene el foco (la clase la pone y quita el controlador) */
+/* Se usa #formCurso input.resaltado para que gane a la regla "#formCurso input" (más específica) */
+#formCurso input.resaltado {
+  background-color: #fff8dc;
+  border-color: #3498db;
+  outline: none;
+}
