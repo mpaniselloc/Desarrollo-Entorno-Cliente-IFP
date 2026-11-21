@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Academia - Cursos</title>
+  <link rel="stylesheet" href="academia.css">
+</head>
+
+<body>
+
+  <h1>Gestión de cursos</h1>
+
+  <form id="formCurso">
+    <div>
+      <label for="codigo">Codigo:</label>
+      <input type="text" id="codigo" placeholder="DAW001/25">
+      <span class="info" title="3 letras, 3 números, '/' y 2 números del año. Ej: DAW001/25">ⓘ</span>
+      <span id="errorCodigo"></span>
+    </div>
+
+    <div>
+      <label for="nombreCurso">Nombre Curso:</label>
+      <input type="text" id="nombreCurso" placeholder="Desarrollo de aplicaciones web">
+      <span class="info" title="Solo letras, entre 5 y 100 caracteres, primera letra siempre mayuscul">ⓘ</span>
+      <span id="errorNombreCurso"></span>
+
+    </div>
+
+    <div>
+      <button type="submit"> Añadir Curso</button>
+    </div>
+  </form>
+
+  <section id="zonaListado">
+    <h2>Listado de cursos</h2>
+
+    <div id="controles">
+      <button type="button" id="btnMostrarTodos">Mostrar todos</button>
+      <button type="button" id="btnQuitarTodos">Quitar todos</button>
+      <!-- Campo para indicar el código del curso oculto que se quiere volver a mostrar -->
+      <input type="text" id="codigoOculto" placeholder="Código a mostrar">
+      <button type="button" id="btnMostrarOculto">Mostrar oculto</button>
+      <span id="errorOculto"></span>
+    </div>
+
+    <p id="contador">
+      Visibles: <span id="contadorVisibles">0</span> /
+      Total: <span id="contadorTotal">0</span>
+    </p>
+
+    <ul id="listaCursos"></ul>
+  </section>
+
+
+  <script src="modelo.js"></script>
+  <script src="vista.js"></script>
+  <script src="controlador.js"></script>
+</body>
+
+</html>
